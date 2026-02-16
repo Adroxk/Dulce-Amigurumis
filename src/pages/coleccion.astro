@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Navidad from '../assets/santaAmigurumi.png';
+import Primavera from '../assets/primaveraAmigurumi.png';
+import Verano from '../assets/veranoAmigurumi.png';
+import Otoño from '../assets/otoñoAmigurumi.png';
+---
+
+<Layout titulo="Colección">
+
+<section class="contenedor-coleccion">
+
+  <h2>Nuestras Colecciones</h2>
+
+  <div class="grid-coleccion">
+
+    <a href="/ProyectoAmigurumis/src/assets/santaAmigurumi" class="tarjeta-coleccion">
+      <Image 
+        src={Navidad}
+        alt="Colección Navideña"
+        widths={[400, 800]}
+        class="img-coleccion"
+      />
+      <h3>Navideña</h3>
+      <p>Amigurumis especiales para la temporada.</p>
+    </a>
+
+    <a href="/ProyectoAmigurumis/src/assets/primaveraAmigurumi" class="tarjeta-coleccion">
+      <Image 
+        src={Primavera}
+        alt="Colección Primavera"
+        widths={[400, 800]}
+        class="img-coleccion"
+      />
+      <h3>Primavera</h3>
+      <p>Diseños suaves y adorables para los más pequeños.</p>
+    </a>
+
+    <a href="/ProyectoAmigurumis/src/assets/veranoAmigurumi" class="tarjeta-coleccion">
+      <Image 
+        src={Verano}
+        alt="Colección Verano"
+        widths={[400, 800]}
+        class="img-coleccion"
+      />
+      <h3>Verano</h3>
+      <p>Diseños frescos y divertidos para los días calurosos.</p>
+    </a>
+
+     <a href="/ProyectoAmigurumis/src/assets/otoñoAmigurumi" class="tarjeta-coleccion">
+      <Image 
+        src={Otoño}
+        alt="Colección Otoño"
+        widths={[400, 800]}
+        class="img-coleccion"
+      />
+      <h3>Otoño</h3>
+      <p>Diseños frescos y divertidos para los días calurosos.</p>
+    </a>
+
+  </div>
+
+</section>
+
+</Layout>

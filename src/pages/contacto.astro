@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout titulo="Contacto">
+
+<section class="contenedor-contacto">
+
+  <h2>Contáctanos</h2>
+  <p>¿Te interesa algún modelo o quieres uno personalizado? Escríbenos y con gusto te atendemos.</p>
+
+  <div class="contacto-grid">
+
+    <!-- Info directa -->
+    <div class="contacto-info">
+  <h3>Información</h3>
+
+  <div class="contacto-bloque">
+    <p class="contacto-label">WhatsApp</p>
+
+    <a 
+      href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20información%20🧶"
+      target="_blank"
+      class="btn-whatsapp"
+    >
+      Pedir información por WhatsApp
+    </a>
+  </div>
+
+  <div class="contacto-bloque">
+    <p class="contacto-label">Correo</p>
+    <p class="contacto-email">tucorreo@email.com</p>
+  </div>
+</div>
+
+
+    
+
+    <!-- Formulario visual -->
+    <div class="contacto-formulario">
+      <h3>Envíanos un mensaje</h3>
+
+    <form id="form-contacto">
+    
+    <input type="text" id="nombre" placeholder="Tu nombre" required />
+
+    <input type="email" id="correo" placeholder="Tu correo" required />
+
+    <textarea id="mensaje" placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+
+    <button type="submit">Enviar mensaje</button>
+    </form>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form-contacto");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre").value;
+      const correo = document.getElementById("correo").value;
+      const mensaje = document.getElementById("mensaje").value;
+
+      const texto = `Hola, soy ${nombre}.
+        Correo: ${correo}
+        Mensaje: ${mensaje}`;
+
+      const numero = "9993095613";
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
+
+
+</Layout>

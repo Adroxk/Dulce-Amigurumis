@@ -1,0 +1,57 @@
+---
+export interface Props {
+  titulo?: string;
+}
+const { titulo } = Astro.props;
+const currentPath = Astro.url.pathname;
+import { Image } from 'astro:assets';
+import Logo from '../assets/LogoAmigurumi.png';
+---
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{titulo ? `${titulo} | Amigurumis` : 'Amigurumis'}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+<header class="header">
+   <a href="/" class="logo-link">
+    <Image 
+        src={Logo}
+        alt="Logo Amigurumis"
+        widths={[400, 800]}
+        class="logo-img"
+      />
+</a>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="/" class={currentPath === '/' ? 'activo' : ''}>Inicio</a></li>
+            <li><a href="/modelos" class={currentPath === '/modelos' ? 'activo' : ''}>Modelos</a></li>
+            <li><a href="/contacto" class={currentPath === '/contacto' ? 'activo' : ''}>Contacto</a></li>
+            <li><a href="/coleccion" class={currentPath === '/coleccion' ? 'activo' : ''}>Colección</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <slot />
+</main>
+
+<footer>
+    <p>© 2024 Amigurumis. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
+

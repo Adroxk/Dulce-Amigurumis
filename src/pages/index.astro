@@ -1,17 +1,78 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import amigurumiHero from '../assets/amigurumiHero.png';
+import amigurumiOsito from '../assets/amigurumiOsito.png';
+import amigurummiConejito from '../assets/amigurummiConejito.png';
+import amigurumiAbejita from '../assets/amigurumiAbejita.png';
+import amigurumiUnicornio from '../assets/amigurumiUnicornio.png';
+import amigurumiNina from '../assets/amigurumiNina.png';
+import amigurumiPulpito from '../assets/amigurumiPulpito.png';
+import amigurumiGatito from '../assets/amigurumiGatito.png';
+import amigurumiPerrito from '../assets/amigurumiPerrito.png';
+import amigurumiDinosaurio from '../assets/amigurumiDinosaurio.png';
+import amigurumiElefantito from '../assets/amigurumiElefantito.png';
+import amigurumi1 from '../assets/amigurumi1.png';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout titulo="Inicio">
+
+  <section class="hero">
+    <Image src={amigurumiHero} alt="Hero" format="webp" quality={80} widths={[640, 1024,1600]} sizes="100vw" class="hero-img"/>
+  </section>
+
+  <section class="contenedor">
+    <div class="carrusel">
+      <div class="track">
+
+        <div class="item-carrusel">
+          <Image src={amigurumiOsito} alt="Osito" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurummiConejito} alt="Conejito" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiAbejita} alt="Abejita" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiUnicornio} alt="Unicornio" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiNina} alt="amigurumi Niña" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiPulpito} alt="amigurumi Pulpito" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiGatito} alt="amigurumi Gatito" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiPerrito} alt="amigurumi Perrito" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiDinosaurio} alt="amigurumi Dinosaurio" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+        <div class="item-carrusel">
+          <Image src={amigurumiElefantito} alt="amigurumi Elefantito" widths={[300, 600]} sizes="(max-whith: 768px) 100vw, 300px" class="img-carrusel">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>¡Bienvenidos a nuestra colección de Amigurumis!</h2>
+    <p>En nuestra tienda encontrarás una encantadora variedad de amigurumis hechos a mano...</p>
+    <Image src={amigurumi1} alt="Enfermera" widths={[400, 800]} sizes="(max-whith: 768px) 100vw, 400px" class="img-carrusel">
+  </section>
+
+</Layout>
