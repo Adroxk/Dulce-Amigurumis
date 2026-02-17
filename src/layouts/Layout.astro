@@ -10,7 +10,7 @@ import Logo from '../assets/LogoAmigurumi.png';
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{titulo ? `${titulo} | Amigurumis` : 'Amigurumis'}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,24 +25,31 @@ import Logo from '../assets/LogoAmigurumi.png';
 <body>
 
 <header class="header">
-   <a href="/" class="logo-link">
-    <Image 
-        src={Logo}
-        alt="Logo Amigurumis"
-        widths={[400, 800]}
-        class="logo-img"
-      />
-</a>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="/" class={currentPath === '/' ? 'activo' : ''}>Inicio</a></li>
-            <li><a href="/modelos" class={currentPath === '/modelos' ? 'activo' : ''}>Modelos</a></li>
-            <li><a href="/contacto" class={currentPath === '/contacto' ? 'activo' : ''}>Contacto</a></li>
-            <li><a href="/coleccion" class={currentPath === '/coleccion' ? 'activo' : ''}>Colección</a></li>
-        </ul>
-    </nav>
+  <a href="/" class="logo-link">
+    <Image 
+      src={Logo}
+      alt="Logo Amigurumis"
+      widths={[300, 600]}
+      class="logo-img"
+    />
+  </a>
+
+  <button class="menu-toggle" id="menu-toggle">
+    ☰
+  </button>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/modelos">Modelos</a></li>
+      <li><a href="/coleccion/navidad">Colección</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
 </header>
+
 
 <main>
     <slot />
@@ -54,4 +61,17 @@ import Logo from '../assets/LogoAmigurumi.png';
 
 </body>
 </html>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+      });
+    }
+  });
+</script>
 
