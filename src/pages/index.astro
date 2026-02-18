@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import amigurumiHero from '../assets/amigurumiHero.png';
+import amigurumiHero from '../assets/HeroAmigurumi2.png';
 import amigurumiOsito from '../assets/amigurumiOsito.png';
 import amigurummiConejito from '../assets/amigurummiConejito.png';
 import amigurumiAbejita from '../assets/amigurumiAbejita.png';
@@ -20,6 +20,36 @@ import amigurumi1 from '../assets/amigurumi1.png';
   <section class="hero">
     <Image src={amigurumiHero} alt="Hero" format="webp" quality={80} widths={[640, 1024,1600]} sizes="100vw" class="hero-img"/>
   </section>
+
+<section class="intro">
+
+  <h2>Hechos con dedicación y amor</h2>
+  <p class="intro-sub">
+    Cada amigurumi es tejido a mano con cuidado en cada detalle.
+  </p>
+
+  <div class="beneficios">
+
+    <div class="beneficio">
+      <h3>🧶 Artesanales</h3>
+      <p>Tejidos completamente a mano con técnicas tradicionales.</p>
+    </div>
+
+    <div class="beneficio">
+      <h3>🎁 Perfectos para regalo</h3>
+      <p>Ideales para sorprender en cumpleaños y momentos especiales.</p>
+    </div>
+
+    <div class="beneficio">
+      <h3>💖 Personalizados</h3>
+      <p>Podemos crear diseños únicos según tu idea.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
 
   <section class="contenedor">
     <div class="carrusel">
@@ -111,10 +141,33 @@ import amigurumi1 from '../assets/amigurumi1.png';
     </div>
   </section>
 
-  <section>
-    <h2>¡Bienvenidos a nuestra colección de Amigurumis!</h2>
-    <p>En nuestra tienda encontrarás una encantadora variedad de amigurumis hechos a mano...</p>
-    <Image src={amigurumi1} alt="Enfermera" widths={[400, 800]} sizes="(max-whith: 768px) 100vw, 400px" class="img-carrusel">
-  </section>
+ <section class="cta-final">
+
+  <div class="cta-texto">
+    <h2>¿Tienes una idea especial?</h2>
+    <p>
+      Podemos crear un amigurumi personalizado para esa ocasión única.
+      Escríbenos y cuéntanos lo que imaginas.
+    </p>
+
+    <a 
+      href="https://wa.me/52134567890?text=Hola,%20quiero%20un%20amigurumi%20personalizado"
+      target="_blank"
+      class="btn-whatsapp"
+    >
+      Pedir por WhatsApp
+    </a>
+  </div>
+
+  <div class="cta-imagen">
+    <Image 
+      src={amigurumi1}
+      alt="Amigurumi personalizado"
+      class="cta-img"
+    />
+  </div>
+
+</section>
+
 
 </Layout>

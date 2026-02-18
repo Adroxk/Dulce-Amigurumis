@@ -4,6 +4,7 @@ export interface Props {
 }
 const { titulo } = Astro.props;
 const currentPath = Astro.url.pathname;
+const year = new Date().getFullYear();
 import { Image } from 'astro:assets';
 import Logo from '../assets/LogoAmigurumi.png';
 ---
@@ -56,7 +57,7 @@ import Logo from '../assets/LogoAmigurumi.png';
 </main>
 
 <footer>
-    <p>© 2024 Amigurumis. Todos los derechos reservados.</p>
+    <p>© {year} Amigurumis. Todos los derechos reservados.</p>
 </footer>
 
 </body>
