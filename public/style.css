@@ -534,6 +534,10 @@ footer {
     margin: 0 auto;
 }
 
+.cta-texto {
+    text-align: center;
+}
+
 .cta-texto h2 {
     margin-bottom: 1rem;
     color: #c2185b;
@@ -551,4 +555,6 @@ footer {
     max-width: 380px;   /* controla tamaño */
     height: 420px;  /* controla altura */
 }
+
+
 
