@@ -74,5 +74,15 @@ import Logo from '../assets/LogoAmigurumi.png';
       });
     }
   });
+
+window.addEventListener('click', function(e) {
+  if (!e.target.closest('menu') && ! e.target.closest('#menu-toggle')) {
+    menu.classList.remove('active');
+  }
+})
+
+  document.addEventListener('scroll', function(){
+    menu.classList.remove('active');
+  });
 </script>
 
